@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+<body style="background-color: lightyellow; font-family: Arial, sans-serif; color: darkgreen;">
+<p id="mese">Egyszer volt, hol nem volt, volt egyszer egy kis nyuszi...</p>
+<button onclick="kovetkezoSora()">Következő sor</button>
+<script>
+let sorok = [
+"A nyuszi nagyon szerette a csillagokat, és minden este kiment az erdőbe csillagokat nézni.",
+"Egy este találkozott egy kedves bagollyal, aki elmesélte neki a világ titkait.",
+"A nyuszi nagyon boldog lett, és új barátjára mindig emlékezett.",
+"Így minden este békésen álomra hajtotta a fejét."
+];
+let index = 0;
+function kovetkezoSora() {
+  if(index < sorok.length){
+    document.getElementById("mese").innerText = sorok[index];
+    index++;
+  } else {
+    document.getElementById("mese").innerText = "A mese véget ért. Jó éjt! 😴";
+  }
+}
+</script>
+</body>
+</html>
